@@ -1,0 +1,17 @@
+.authInput {
+  width: 40vw;
+
+  display: flex;
+  margin-bottom: 1em;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+}
+
+.authInput input:invalid[focused="true"] ~ span {
+  display: block;
+}
+.authInput span {
+  color: red;
+  display: none;
+}

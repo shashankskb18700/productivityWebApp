@@ -1,8 +1,9 @@
+import Auth from "./authentication/auth";
+
 const App = () => {
   return (
     <div>
-      <div>app</div>
-      app
+      <Auth></Auth>
     </div>
   );
 };
