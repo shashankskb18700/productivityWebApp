@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./auth.css";
 import AuthInput from "./authInput/authInput";
 import AuthSocial from "./authSocial/authSocial";
 import axios from "axios";
-import { ReactComponent as Logo } from "../../assets/svg/opy.svg";
 
 const Auth = () => {
   const [value, setValue] = useState({
@@ -13,6 +12,28 @@ const Auth = () => {
     confirmPassword: "",
   });
   const [userType, setUserType] = useState(true);
+  const [passwordVerification, setPasswordVerification] = useState(false);
+
+  useEffect(() => {
+    var minMaxLength = /^[\s\S]{8,32}$/,
+      upper = /[A-Z]/,
+      lower = /[a-z]/,
+      number = /[0-9]/,
+      special = /[ !"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]/;
+
+    if (
+      minMaxLength.test(value["password"]) &&
+      upper.test(value["password"]) &&
+      lower.test(value["password"]) &&
+      number.test(value["password"]) &&
+      special.test(value["password"])
+    ) {
+      setPasswordVerification(false);
+    } else {
+      if (value["password"].length != 0) setPasswordVerification(true);
+    }
+  }, [value["password"]]);
+  console.log(passwordVerification);
 
   const signup = [
     {
@@ -43,8 +64,7 @@ const Auth = () => {
       lable: "Password",
       errorMessage:
         "password should be between 8-16 character and it should include a one letter , one special character and one number number",
-      pattern:
-        "^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[!@#$%^&*()-_+=?])(?=.*[^wds]).{8,16}$",
+
       required: true,
     },
 
@@ -73,12 +93,12 @@ const Auth = () => {
     },
     {
       id: 2,
-      name: "Password",
+      name: "password",
       type: "password",
       placeholder: "Password",
       lable: "Password",
       errorMessage: "Password",
-
+      pattern: "(?m)^((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\\W]).{8,})$",
       required: true,
     },
   ];
@@ -95,7 +115,10 @@ const Auth = () => {
     <div className="authentication">
       <div className="backgroundGraphics"></div>
       <div className="authForm">
-        <form onSubmit={handleSubmit}>
+        <form
+          onSubmit={handleSubmit}
+          className={passwordVerification ? "passError" : ""}
+        >
           {userType
             ? login.map((input) => (
                 <AuthInput

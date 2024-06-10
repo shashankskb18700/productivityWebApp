@@ -16,7 +16,12 @@
   display: block;
   animation: animateinput 1s ease-in-out;
 }
-
+.passError .authInput:nth-child(3) span {
+  /* width: 50vh; */
+  /* background-color: red; */
+  display: block;
+  animation: animateinput 1s ease-in-out;
+}
 @keyframes animateinput {
   0% {
     display: none;
