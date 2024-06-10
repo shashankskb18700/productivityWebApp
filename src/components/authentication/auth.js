@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./auth.css";
 import AuthInput from "./authInput/authInput";
+import AuthSocial from "./authSocial/authSocial";
+import axios from "axios";
+import { ReactComponent as Logo } from "../../assets/svg/opy.svg";
 
 const Auth = () => {
   const [value, setValue] = useState({
@@ -9,8 +12,9 @@ const Auth = () => {
     password: "",
     confirmPassword: "",
   });
+  const [userType, setUserType] = useState(true);
 
-  const input = [
+  const signup = [
     {
       id: 1,
       name: "name",
@@ -55,27 +59,100 @@ const Auth = () => {
       required: true,
     },
   ];
+
+  const login = [
+    {
+      id: 1,
+      name: "email",
+      type: "email",
+      placeholder: "Email",
+      lable: "Email",
+      errorMessage: "It should be a valid email",
+
+      required: true,
+    },
+    {
+      id: 2,
+      name: "Password",
+      type: "password",
+      placeholder: "Password",
+      lable: "Password",
+      errorMessage: "Password",
+
+      required: true,
+    },
+  ];
   const handleChange = (e) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const cookie = await axios.post("/login", { ...value });
+    console.log(cookie);
   };
-  console.log(value);
 
   return (
     <div className="authentication">
-      <form onSubmit={handleSubmit}>
-        {input.map((input) => (
-          <AuthInput
-            key={input.id}
-            {...input}
-            value={value[input.name]}
-            onChange={handleChange}
-          ></AuthInput>
-        ))}
-        <button>Submit</button>
-      </form>
+      <div className="backgroundGraphics"></div>
+      <div className="authForm">
+        <form onSubmit={handleSubmit}>
+          {userType
+            ? login.map((input) => (
+                <AuthInput
+                  key={input.id}
+                  {...input}
+                  value={value[input.name]}
+                  onChange={handleChange}
+                ></AuthInput>
+              ))
+            : signup.map((input) => (
+                <AuthInput
+                  key={input.id}
+                  {...input}
+                  value={value[input.name]}
+                  onChange={handleChange}
+                ></AuthInput>
+              ))}
+        </form>
+
+        <div className="callToAction">
+          <button onClick={handleSubmit}>
+            {userType ? "Login" : "Sign up"}
+          </button>
+          <p
+            style={{
+              paddingTop: "1em",
+              paddingBottom: "1em",
+              fontWeight: "bold",
+            }}
+          >
+            {" "}
+            Or continue with:
+          </p>
+          <AuthSocial></AuthSocial>
+          {userType ? (
+            <span>
+              New to Efficio ?{" "}
+              <span
+                style={{ color: "blue" }}
+                onClick={() => setUserType(!userType)}
+              >
+                Get started!
+              </span>
+            </span>
+          ) : (
+            <span>
+              Already a member ?{" "}
+              <span
+                style={{ color: "blue" }}
+                onClick={() => setUserType(!userType)}
+              >
+                Log in to Efficio.
+              </span>
+            </span>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

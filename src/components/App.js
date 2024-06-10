@@ -1,9 +1,9 @@
-import Auth from "./authentication/auth";
+import AppRouter from "./routes/routes";
 
 const App = () => {
   return (
     <div>
-      <Auth></Auth>
+      <AppRouter></AppRouter>
     </div>
   );
 };
