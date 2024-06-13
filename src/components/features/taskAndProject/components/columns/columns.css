@@ -1,0 +1,14 @@
+.container {
+  margin: 2em;
+  border: 2px solid red;
+  width: 90vw;
+  /* width: 400px; */
+}
+
+.taskList {
+  flex-grow: 1;
+}
+.dragOver {
+  background-color: chartreuse;
+  transition: background-color 0.2 ease;
+}

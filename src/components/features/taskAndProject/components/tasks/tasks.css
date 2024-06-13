@@ -1,0 +1,10 @@
+.task {
+  padding: 1em;
+  border: 1px solid black;
+
+  margin: 0.5em;
+}
+
+.dragging {
+  background-color: rgb(27, 200, 27);
+}
