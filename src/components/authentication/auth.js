@@ -3,6 +3,7 @@ import "./auth.css";
 import AuthInput from "./authInput/authInput";
 import AuthSocial from "./authSocial/authSocial";
 import axios from "axios";
+import { ReactComponent as Logo } from "../../assets/svg/logoIcon.svg";
 
 const Auth = () => {
   const [value, setValue] = useState({
@@ -115,6 +116,7 @@ const Auth = () => {
     <div className="authentication">
       <div className="backgroundGraphics"></div>
       <div className="authForm">
+        <Logo className="logo"></Logo>
         <form
           onSubmit={handleSubmit}
           className={passwordVerification ? "passError" : ""}
@@ -157,7 +159,7 @@ const Auth = () => {
             <span>
               New to Efficio ?{" "}
               <span
-                style={{ color: "blue" }}
+                style={{ color: "var(--background)" }}
                 onClick={() => setUserType(!userType)}
               >
                 Get started!
@@ -167,7 +169,7 @@ const Auth = () => {
             <span>
               Already a member ?{" "}
               <span
-                style={{ color: "blue" }}
+                style={{ color: "#F6F4F3" }}
                 onClick={() => setUserType(!userType)}
               >
                 Log in to Efficio.

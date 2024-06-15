@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg"   width="800" height="500" version="1.1"><g id="freepik--Files--inject-274" class="animable animator-active" >
+  
+  <polygon points="375.71 179.07 368.76 406.55 535.55 410.53 541.75 184.79 375.71 179.07" style="fill: rgb(255, 255, 255); transform-origin: 455.255px 294.8px;" id="elphvd7fuizhg" class="animable"/>
+  <path d="M375.72,179.07l166,5.51H542v.21c-1.73,63.42-3.86,141.45-6.16,225.73v.26h-.26l-1.22,0-165.58-4h-.24v-.24c4.26-134.54,7.13-225.38,7.2-227.47C375.65,181.16,373,272,369,406.56l-.23-.24,165.58,3.92,1.22,0-.27.25c2.34-84.28,4.5-162.31,6.25-225.74l.21.22Z" style="fill: rgb(38, 50, 56); transform-origin: 455.27px 294.925px;" id="el3jw3o7nezm3" class="animable"/>
+  <path d="M518.36,227.73c0,.44-28.7.39-64.08-.09s-64.07-1.22-64.07-1.65,28.7-.39,64.09.09S518.37,227.3,518.36,227.73Z" style="fill: rgb(38, 50, 56); transform-origin: 454.285px 226.862px;" id="eleelflqhxu8" class="animable"/><path d="M519.56,247.86c0,.43-28.69.39-64.08-.09s-64.07-1.23-64.06-1.66,28.69-.39,64.08.09S519.57,247.43,519.56,247.86Z" style="fill: rgb(38, 50, 56); transform-origin: 455.49px 246.985px;" id="el4vzwqf51gg7" class="animable"/><path d="M521.28,309.55c0,.43-28.7.39-64.08-.09s-64.08-1.22-64.07-1.66,28.69-.39,64.09.1S521.28,309.12,521.28,309.55Z" style="fill: rgb(38, 50, 56); transform-origin: 457.205px 308.673px;" id="el5kw54m5qsw" class="animable"/><path d="M521.28,290c0,.43-28.7.39-64.08-.1s-64.08-1.22-64.07-1.65,28.69-.39,64.09.09S521.28,289.61,521.28,290Z" style="fill: rgb(38, 50, 56); transform-origin: 457.205px 289.124px;" id="elpok7747md7" class="animable"/><path d="M521.28,270.52c0,.43-28.7.39-64.08-.09s-64.08-1.22-64.07-1.65,28.69-.39,64.09.09S521.28,270.09,521.28,270.52Z" style="fill: rgb(38, 50, 56); transform-origin: 457.205px 269.65px;" id="elp8tra8wewd" class="animable"/><path d="M519.34,331.33c0,.43-28.7.39-64.08-.09s-64.07-1.22-64.07-1.65,28.7-.39,64.09.09S519.35,330.9,519.34,331.33Z" style="fill: rgb(38, 50, 56); transform-origin: 455.265px 330.46px;" id="elfyspot40isi" class="animable"/><path d="M519,352.74c0,.43-28.7.39-64.08-.09s-64.08-1.23-64.07-1.66,28.69-.39,64.09.09S519,352.31,519,352.74Z" style="fill: rgb(38, 50, 56); transform-origin: 454.925px 351.865px;" id="el3ppm0og4j4" class="animable"/><path d="M518.6,374.14c0,.43-28.7.39-64.09-.09s-64.07-1.22-64.06-1.65,28.69-.39,64.09.09S518.6,373.71,518.6,374.14Z" style="fill: rgb(38, 50, 56); transform-origin: 454.525px 373.27px;" id="el923jp95bjkr" class="animable"/><ellipse cx="539.67" cy="191.74" rx="40.56" ry="40.6" style="fill: #F6F4F3; transform-origin: 539.67px 191.74px;" id="elgykhih2lg7n" class="animable"/><g id="elk9at65kf8qs"><circle cx="539.71" cy="191.74" r="40.6" style="opacity: 0.5; transform-origin: 539.71px 191.74px;" class="animable" id="el3409qlopcvv"/></g><ellipse cx="535.21" cy="191.74" rx="40.56" ry="40.6" style="fill: #F6F4F3; transform-origin: 535.21px 191.74px;" id="el7eahtfvcrzh" class="animable"/><rect x="532.85" y="167.82" width="4.74" height="47.85" rx="2.08" style="fill: rgb(250, 250, 250); transform-origin: 535.22px 191.745px;" id="el5nh4qibcfmj" class="animable"/><g id="elnx5qbndh78c"><rect x="532.84" y="167.84" width="4.74" height="47.82" rx="2.09" style="fill: rgb(250, 250, 250); transform-origin: 535.21px 191.75px; transform: rotate(-90deg);" class="animable" id="el0orxtqm9qh9c"/></g></g><defs> 
+    <filter id="active" height="200%"> 
+        <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
+        
+        <feFlood flood-color="#32DFEC" flood-opacity="1" result="PINK"/>
+        <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE"/>
+
+        <feMerge>
+            <feMergeNode in="OUTLINE"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+    <filter id="hover" height="200%">
+        <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"/>
+        
+        <feFlood flood-color="#ff0000" flood-opacity="0.5" result="PINK"/>
+        <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE"/>
+
+        <feMerge>
+            <feMergeNode in="OUTLINE"/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+            <feColorMatrix type="matrix" values="0   0   0   0   0                 0   1   0   0   0                 0   0   0   0   0                 0   0   0   1   0 "/>
+    </filter>
+</defs></svg>

@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 .authInput {
-  width: 23em;
+  width: 20.5em;
   font-family: "Nunito";
   display: flex;
   margin-bottom: 1em;
@@ -22,6 +22,7 @@
   display: block;
   animation: animateinput 1s ease-in-out;
 }
+
 @keyframes animateinput {
   0% {
     display: none;
@@ -34,10 +35,11 @@
 }
 .authInput span {
   display: none;
-  color: red;
+  color: #c05028;
   display: none;
   height: fit-content;
 }
+
 @media (max-width: 600px) {
   .authInput {
     width: inherit;

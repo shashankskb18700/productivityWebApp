@@ -68,7 +68,7 @@ const TaskAndProject = () => {
         [newFinish.id]: newFinish,
       },
     };
-    console.log(newFinish);
+
     setData(newState);
   };
 
