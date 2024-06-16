@@ -5,11 +5,10 @@ import "./home.css";
 
 const Home = () => {
   return (
-    <div className="side">
+    <div className="home">
       <Header></Header>
       <Sidebar></Sidebar>
       {/* <TaskAndProject></TaskAndProject> */}
-      home
     </div>
   );
 };

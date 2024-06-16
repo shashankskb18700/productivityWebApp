@@ -5,6 +5,8 @@ import AuthSocial from "./authSocial/authSocial";
 import axios from "axios";
 import { ReactComponent as Logo } from "../../assets/svg/logoIcon.svg";
 
+import { ReactComponent as Slogan } from "../../assets/svg/slogan.svg";
+
 const Auth = () => {
   const [value, setValue] = useState({
     name: "",
@@ -117,6 +119,7 @@ const Auth = () => {
       <div className="backgroundGraphics"></div>
       <div className="authForm">
         <Logo className="logo"></Logo>
+        <Slogan className="logo slogan"></Slogan>
         <form
           onSubmit={handleSubmit}
           className={passwordVerification ? "passError" : ""}

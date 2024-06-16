@@ -1,5 +1,22 @@
 .header {
   width: 100vw;
-  background-color: red;
-  height: 3em;
+  background-color: var(--primary);
+  /* height: 3em; */
+  color: var(--text);
+  padding: 0em 1em;
+}
+
+.symbol {
+  transform: scale(0.31);
+  margin-bottom: 0.4em;
+  fill: var(--background);
+}
+.headerLogo {
+  transform: scale(2);
+  margin-left: 1em;
+  fill: var(--background);
+}
+.brandDesc {
+  display: flex;
+  align-items: center;
 }
