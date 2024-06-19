@@ -1,6 +1,16 @@
 .sidebar {
   width: 15vw;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   background-color: #20508c;
+  color: #f6f4f3;
+  font-weight: bold;
+  font-family: "Nunito";
+}
+
+.sidebar div {
+  margin: 2em 0;
 }

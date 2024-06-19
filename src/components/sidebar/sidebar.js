@@ -2,8 +2,12 @@ import "./sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      sidebar"lsnf
-      <div></div>
+      <div>Dashboard</div>
+      <div>Task</div>
+      <div>Project</div>
+      <div>Calender</div>
+      <div>Reports</div>
+      <div>Setting</div>
     </div>
   );
 };
