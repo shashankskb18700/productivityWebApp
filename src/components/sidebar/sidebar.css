@@ -6,7 +6,7 @@
   flex-direction: column;
 
   background-color: #20508c;
-  color: #f6f4f3;
+  color: var(--text);
   font-weight: bold;
   font-family: "Nunito";
 }
