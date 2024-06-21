@@ -1,8 +1,11 @@
-import TaskAndProject from "../features/taskAndProject/taskAndProject";
+import { v4 as uuidv4 } from "uuid";
+import { Link } from "react-router-dom";
+
 import Sidebar from "../sidebar/sidebar";
 import Header from "../header/header";
-import Document from "../features/document/document";
+
 import "./home.css";
+
 import { ReactComponent as TaskSvg } from "../../assets/svg/homeAddTask.svg";
 import { ReactComponent as CalenderSvg } from "../../assets/svg/homeCalender.svg";
 import { ReactComponent as DocumentSvg } from "../../assets/svg/homeAddDocument.svg";
@@ -16,19 +19,19 @@ const Home = () => {
       <div className="homeComponent">
         <Sidebar></Sidebar>
         <div className="homeFeature">
-          <div className="homeFeatureComponent">
+          <Link to={`/task/${uuidv4()}`} className="homeFeatureComponent">
             <TaskSvg></TaskSvg>
             <b>CREATE TASK</b>
-          </div>
+          </Link>
           <div className="homeFeatureComponent">
             <CalenderSvg></CalenderSvg>
             <b>CALENDER</b>
           </div>
 
-          <div className="homeFeatureComponent">
+          <Link to={`/document/${uuidv4()}`} className="homeFeatureComponent">
             <DocumentSvg></DocumentSvg>
             <b>DOCUMENT</b>
-          </div>
+          </Link>
           <div className="homeFeatureComponent">
             <DrawSvg></DrawSvg>
             <b>DRAW</b>
