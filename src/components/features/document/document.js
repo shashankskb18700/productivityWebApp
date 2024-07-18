@@ -2,8 +2,10 @@ import Quill from "quill";
 import "quill/dist/quill.snow.css";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
+import { useParams } from "react-router-dom";
 
 const Document = () => {
+  const { id: documentId } = useParams();
   const [socket, setSocket] = useState();
   const [quill, setQuill] = useState();
   useEffect(() => {
@@ -13,6 +15,17 @@ const Document = () => {
       sockt.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+    if (socket == null || quill == null) return;
+
+    socket.once("load-document", (document) => {
+      quill.setContents(document);
+      quill.enable();
+    });
+
+    socket.emit("get-document", documentId);
+  }, [socket, quill, document]);
 
   useEffect(() => {
     if (socket == null || quill == null) return;
@@ -50,6 +63,8 @@ const Document = () => {
     wrapper.append(editor);
 
     const q = new Quill(editor, { theme: "snow" });
+    q.disable();
+    q.setText("Loading...");
     setQuill(q);
   }, []);
 
