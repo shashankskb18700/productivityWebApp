@@ -5,14 +5,14 @@
 }
 
 .authentication {
-  min-height: 100vh;
-  background-color: var(--background);
+  /* background-color: var(--background); */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-size: 1em;
   /* padding-bottom: 2em; */
+
   color: var(--text);
 }
 
@@ -31,16 +31,18 @@
 }
 .authForm {
   display: flex;
+  width: 35vw;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--primary);
+  background-color: var(--secondary-background);
   /* background-image: url(../../assets/svg/logoIcon.svg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
   background-size: 20em; */
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  color: var(--primary-text);
+  box-shadow: var(--primary-border) 0px 0px 10px;
   margin-top: 2em;
   padding-bottom: 1em;
 
@@ -49,6 +51,20 @@
 }
 .authForm label {
   font-weight: bold;
+}
+
+.authSection {
+  width: 100vw;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../assets/svg/svgviewer-output\ \(8\).svg"),
+    url("../../assets/svg/Time\ management-cuate\ \(1\).svg");
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed fixed;
+  background-position: left 0em bottom, right top;
+  background-size: 15em, 12em;
 }
 
 input:focus {
@@ -63,7 +79,7 @@ input {
   padding: 1em 0;
   padding-left: 0.1em;
   color: var(--text);
-  background-color: var(--background);
+  /* background-color: var(--background); */
 }
 
 .callToAction {
@@ -75,8 +91,8 @@ input {
 }
 .callToAction button {
   border: none;
-  background-color: var(--background);
-  color: var(--text);
+  background-color: var(--primary-button);
+  color: var(--button-text);
   width: 24em;
 }
 
@@ -96,18 +112,33 @@ button {
   bottom: 0em;
   z-index: 1;
   /* background-color: var(--primary); */
-  background-image: url("../../assets/svg/fileSharing.svg"),
-    url("../../assets/svg/addFile.svg");
+  /* background-image: url("../../assets/svg/fileSharing.svg"),
+    url("../../assets/svg/addFile.svg"); */
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed fixed;
   background-position: left 0em bottom, right bottom;
   background-size: 25em, 22em;
 }
+.info {
+  background-color: var(--header-background);
+  width: 100vw;
+  /* height: 9vw; */
+  padding-left: 35vw;
+}
+.authFooter {
+  width: 100vw;
+  height: 20vh;
+  background-color: var(--footer-background);
+  color: var(--secondary-background);
+}
 
 .logo {
-  scale: 3;
-  fill: var(--text);
-  margin-top: 4em;
+  /* scale: 0.7; */
+  width: 30vw;
+  height: 6vw;
+  fill: var(--light-text);
+  fill: white;
+  /* margin-top: 1em; */
 }
 .slogan {
   scale: 1;
@@ -122,7 +153,6 @@ button {
     width: 100vw;
 
     background-color: white;
-    min-height: 100vh;
   }
   .authForm {
     width: 80%;

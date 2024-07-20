@@ -7,10 +7,25 @@
 }
 
 :root {
-  --background: #f6f4f3;
-  --primary: #183059;
+  /* Background colors */
+  --background: #fafaff; /* Very Light Gray/Off-White for main background */
+  --secondary-background: #e4d9ff; /* Light Lavender for secondary background */
+  --header-background: #1e2749; /* Dark Blue for header background */
+  --footer-background: #273469; /* Deep Blue for footer background */
+  --sidebar-background: #30343f; /* Dark Gray for sidebar background */
 
-  --secondary: #276fbf;
-  --accent: #f03a47;
-  --text: #af5b5b;
+  /* Text colors */
+  --primary-text: #1e2749; /* Dark Blue for primary text */
+  --secondary-text: #273469; /* Deep Blue for secondary text */
+  --highlight-text: #e4d9ff; /* Light Lavender for highlight text */
+  --light-text: #ffffff; /* White for light text */
+
+  /* Border colors */
+  --primary-border: #e4d9ff; /* Light Lavender for primary border */
+  --secondary-border: #fafaff; /* Very Light Gray for secondary border */
+
+  /* Button colors */
+  --primary-button: #1e2749; /* Dark Blue for primary button */
+  --secondary-button: #30343f; /* Dark Gray for secondary button */
+  --button-text: #ffffff; /* White for button text */
 }

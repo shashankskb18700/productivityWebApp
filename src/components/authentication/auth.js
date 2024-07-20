@@ -116,71 +116,76 @@ const Auth = () => {
 
   return (
     <div className="authentication">
-      <div className="backgroundGraphics"></div>
-      <div className="authForm">
+      <div className="info">
         <Logo className="logo"></Logo>
-        <Slogan className="logo slogan"></Slogan>
-        <form
-          onSubmit={handleSubmit}
-          className={passwordVerification ? "passError" : ""}
-        >
-          {userType
-            ? login.map((input) => (
-                <AuthInput
-                  key={input.id}
-                  {...input}
-                  value={value[input.name]}
-                  onChange={handleChange}
-                ></AuthInput>
-              ))
-            : signup.map((input) => (
-                <AuthInput
-                  key={input.id}
-                  {...input}
-                  value={value[input.name]}
-                  onChange={handleChange}
-                ></AuthInput>
-              ))}
-        </form>
-
-        <div className="callToAction">
-          <button onClick={handleSubmit}>
-            {userType ? "Login" : "Sign up"}
-          </button>
-          <p
-            style={{
-              paddingTop: "1em",
-              paddingBottom: "1em",
-              fontWeight: "bold",
-            }}
+        {/* <Slogan className="logo slogan"></Slogan> */}
+      </div>
+      {/* <div className="backgroundGraphics"></div> */}
+      <div className="authSection">
+        <div className="authForm">
+          <form
+            onSubmit={handleSubmit}
+            className={passwordVerification ? "passError" : ""}
           >
-            {" "}
-            Or continue with:
-          </p>
-          <AuthSocial></AuthSocial>
-          {userType ? (
-            <span>
-              New to Efficio ?{" "}
-              <span
-                style={{ color: "var(--background)" }}
-                onClick={() => setUserType(!userType)}
-              >
-                Get started!
+            {userType
+              ? login.map((input) => (
+                  <AuthInput
+                    key={input.id}
+                    {...input}
+                    value={value[input.name]}
+                    onChange={handleChange}
+                  ></AuthInput>
+                ))
+              : signup.map((input) => (
+                  <AuthInput
+                    key={input.id}
+                    {...input}
+                    value={value[input.name]}
+                    onChange={handleChange}
+                  ></AuthInput>
+                ))}
+          </form>
+
+          <div className="callToAction">
+            <button onClick={handleSubmit}>
+              {userType ? "Login" : "Sign up"}
+            </button>
+            <p
+              style={{
+                paddingTop: "1em",
+                paddingBottom: "1em",
+                fontWeight: "bold",
+              }}
+            >
+              {" "}
+              Or continue with:
+            </p>
+            <AuthSocial></AuthSocial>
+            {userType ? (
+              <span>
+                New to Efficio ?{" "}
+                <span
+                  style={{ color: "var(--background)" }}
+                  onClick={() => setUserType(!userType)}
+                >
+                  Get started!
+                </span>
               </span>
-            </span>
-          ) : (
-            <span>
-              Already a member ?{" "}
-              <span
-                style={{ color: "#F6F4F3" }}
-                onClick={() => setUserType(!userType)}
-              >
-                Log in to Efficio.
+            ) : (
+              <span>
+                Already a member ?{" "}
+                <span
+                  style={{ color: "#F6F4F3" }}
+                  onClick={() => setUserType(!userType)}
+                >
+                  Log in to Efficio.
+                </span>
               </span>
-            </span>
-          )}
+            )}
+          </div>
         </div>
       </div>
+      <div className="authFooter">company info</div>
     </div>
   );
 };
