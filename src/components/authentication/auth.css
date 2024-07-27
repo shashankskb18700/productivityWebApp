@@ -17,8 +17,18 @@
   font-size: 1em;
   min-height: 100vh;
   /* padding-bottom: 2em; */
+  background-image: url("../../assets/svg/Work\ time-pana.svg"),
+    url("../../assets/svg/Collaboration-rafiki.svg"),
+    url("../../assets/svg/Creative\ team-rafiki.svg"),
+    url("../../assets/svg/Process-pana.svg"),
+    url("../../assets/svg/Selecting\ team-amico.svg");
 
   /* font-family: "Roboto"; */
+  background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed fixed;
+  background-position: left 0em bottom 17vh, left 20vw bottom 15.7vh,
+    right 40vw bottom 16.6vh, right 20vw bottom 19vh, right 1em bottom 16.7vh;
+  background-size: 12em, 9em, 8em, 12em, 13em;
 
   color: var(--text);
 }
@@ -66,12 +76,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url("../../assets/svg/auth2.svg"),
-    url("../../assets/svg/auth3.svg"), url("../../assets/svg/auth1.svg"); */
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: fixed fixed;
-  background-position: left 0em bottom, left 15em bottom, right 1em bottom;
-  background-size: 15em, 15em, 15em;
 }
 
 input:focus {
@@ -84,7 +88,7 @@ input {
   /* border: 2px solid var(--background); */
   border-radius: 0.25em;
   padding: 1em 0;
-  padding-left: 0.1em;
+  padding-left: 0.3em;
   color: var(--text);
   font-family: "Roboto";
   /* background-color: var(--background); */
@@ -149,6 +153,13 @@ button {
   border: 2px solid var(--primary-text);
   padding: 1vh 1.5vw;
   border-radius: 0.25em;
+  cursor: pointer;
+}
+.info div:nth-child(2):hover {
+  background-color: var(--header-background);
+  border: 2px solid var(--primary-text);
+  color: var(--light-text);
+  transition: 0.5s;
 }
 
 .productivityGraphics {
@@ -157,7 +168,7 @@ button {
 .authFooter {
   width: 100vw;
   height: 20vh;
-  background-color: var(--footer-background);
+  background-color: var(--header-background);
   color: var(--secondary-background);
 }
 
@@ -206,6 +217,7 @@ button {
     width: 100vw;
 
     background-color: white;
+    background-image: none;
   }
 
   .authSection {

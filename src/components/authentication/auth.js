@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./auth.css";
 import AuthInput from "./authInput/authInput";
 import AuthSocial from "./authSocial/authSocial";
+import Footer from "../footer/footer";
 import axios from "axios";
 import { ReactComponent as Logo } from "../../assets/svg/logoIcon.svg";
 
@@ -170,7 +171,7 @@ const Auth = () => {
 
         <AuthSocial></AuthSocial>
       </div>
-      <div className="authFooter">company info</div>
+      <Footer></Footer>
     </div>
   );
 };
