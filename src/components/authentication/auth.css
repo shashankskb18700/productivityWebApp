@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +12,13 @@
   /* background-color: var(--background); */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   font-size: 1em;
+  min-height: 100vh;
   /* padding-bottom: 2em; */
+
+  /* font-family: "Roboto"; */
 
   color: var(--text);
 }
@@ -24,30 +31,30 @@
 }
 
 .authForm form {
-  padding: 2em;
+  padding-bottom: 2em;
   /* height: 20em; */
   z-index: 4;
-  padding-top: 2em;
 }
 .authForm {
   display: flex;
-  width: 35vw;
+  /* width: 35vw; */
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--secondary-background);
+  /* background-color: var(--secondary-background); */
   /* background-image: url(../../assets/svg/logoIcon.svg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center top;
   background-size: 20em; */
   color: var(--primary-text);
-  box-shadow: var(--primary-border) 0px 0px 10px;
-  margin-top: 2em;
+  /* box-shadow: var(--primary-border) 0px 0px 10px; */
+
   padding-bottom: 1em;
 
-  border-radius: 0.25em;
+  /* border-radius: 0.25em; */
   z-index: 3;
+  padding-right: 1vw;
 }
 .authForm label {
   font-weight: bold;
@@ -55,16 +62,16 @@
 
 .authSection {
   width: 100vw;
-  min-height: 90vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../assets/svg/svgviewer-output\ \(8\).svg"),
-    url("../../assets/svg/Time\ management-cuate\ \(1\).svg");
+  /* background-image: url("../../assets/svg/auth2.svg"),
+    url("../../assets/svg/auth3.svg"), url("../../assets/svg/auth1.svg"); */
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed fixed;
-  background-position: left 0em bottom, right top;
-  background-size: 15em, 12em;
+  background-position: left 0em bottom, left 15em bottom, right 1em bottom;
+  background-size: 15em, 15em, 15em;
 }
 
 input:focus {
@@ -74,26 +81,27 @@ input:focus {
 }
 
 input {
-  border: 2px solid var(--background);
+  /* border: 2px solid var(--background); */
   border-radius: 0.25em;
   padding: 1em 0;
   padding-left: 0.1em;
   color: var(--text);
+  font-family: "Roboto";
   /* background-color: var(--background); */
 }
 
 .callToAction {
   /* width: 23em; */
   background-color: var(--primary);
-  padding: 0 2em;
+  /* padding-right: 1vw; */
   text-align: center;
-  font-family: "Nunito";
+  font-family: "Roboto";
 }
 .callToAction button {
   border: none;
   background-color: var(--primary-button);
   color: var(--button-text);
-  width: 24em;
+  width: 20.5rem;
 }
 
 .callToAction > * {
@@ -120,10 +128,31 @@ button {
   background-size: 25em, 22em;
 }
 .info {
-  background-color: var(--header-background);
+  /* background-color: var(--header-background); */
+  /* text-align:; */
+  font-family: "fira sans";
+  font-weight: 600;
+  font-size: 2em;
   width: 100vw;
+  padding: 0.3em;
   /* height: 9vw; */
-  padding-left: 35vw;
+  /* padding-left: 35vw; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info div:nth-child(2) {
+  font-weight: 500;
+  font-size: 0.4em;
+  font-family: "Roboto";
+  border: 2px solid var(--primary-text);
+  padding: 1vh 1.5vw;
+  border-radius: 0.25em;
+}
+
+.productivityGraphics {
+  transform: scale(2);
 }
 .authFooter {
   width: 100vw;
@@ -144,6 +173,30 @@ button {
   scale: 1;
   margin-top: 1em;
 }
+
+.or {
+  text-align: center;
+  /* border-bottom: 1px solid #000; */
+  line-height: 0.1em;
+  font-family: "roboto";
+  display: flex;
+  flex-direction: column;
+}
+
+.or span {
+  width: 0.1em;
+  height: 20vh;
+  margin: 2em;
+}
+.or1 {
+  width: 0.1em;
+  background: linear-gradient(white, black);
+}
+.or2 {
+  width: 0.1em;
+  background: linear-gradient(black, white);
+}
+
 @media (max-width: 600px) {
   .backgroundGraphics {
     display: none;
@@ -154,16 +207,18 @@ button {
 
     background-color: white;
   }
-  .authForm {
-    width: 80%;
 
+  .authSection {
+    flex-direction: column;
+  }
+  .authForm {
     background-color: white;
     /* background-image: url(../../assets/svg/opy.svg); */
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center top;
+    background-position: center top; */
     /* background-size: 20em; */
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px; */
     margin-top: 2em;
     padding-bottom: 1em;
 
@@ -171,6 +226,24 @@ button {
     z-index: 3;
   }
   .callToAction {
-    width: inherit;
+    /* width: inherit; */
+  }
+
+  .or {
+    flex-direction: row;
+    align-items: center;
+  }
+  .or span {
+    width: 35vw;
+    height: 0.1em;
+    margin: 1em;
+  }
+  .or1 {
+    width: 0.1em;
+    background: linear-gradient(0.25turn, white, black);
+  }
+  .or2 {
+    width: 0.1em;
+    background: linear-gradient(0.25turn, black, white);
   }
 }

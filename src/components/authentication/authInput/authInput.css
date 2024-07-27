@@ -42,6 +42,6 @@
 
 @media (max-width: 600px) {
   .authInput {
-    width: inherit;
+    /* width: inherit; */
   }
 }

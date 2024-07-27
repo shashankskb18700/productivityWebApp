@@ -1,46 +1,41 @@
-import { v4 as uuidv4 } from "uuid";
-import { Link } from "react-router-dom";
-
-import Sidebar from "../sidebar/sidebar";
 import Header from "../header/header";
-
 import "./home.css";
-
-import { ReactComponent as TaskSvg } from "../../assets/svg/homeAddTask.svg";
-import { ReactComponent as CalenderSvg } from "../../assets/svg/homeCalender.svg";
-import { ReactComponent as DocumentSvg } from "../../assets/svg/homeAddDocument.svg";
-import { ReactComponent as DrawSvg } from "../../assets/svg/homeDrawing.svg";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div>
       <Header></Header>
+      <div className="home">
+        <div className="homeSidebar">sidebar </div>
 
-      <div className="homeComponent">
-        <Sidebar></Sidebar>
-        <div className="homeFeature">
-          <Link to={`/task/${uuidv4()}`} className="homeFeatureComponent">
-            <TaskSvg></TaskSvg>
-            <b>CREATE TASK</b>
-          </Link>
-          <div className="homeFeatureComponent">
-            <CalenderSvg></CalenderSvg>
-            <b>CALENDER</b>
+        <div>
+          {" "}
+          <div></div>
+          <div className="creation">
+            <div> create document</div>
+            <div> Schedule meeting</div>
+            <div> create todo</div>
+            <div> create drawing</div>
+            <div> create Project</div>
           </div>
-
-          <Link to={`/document/${uuidv4()}`} className="homeFeatureComponent">
-            <DocumentSvg></DocumentSvg>
-            <b>DOCUMENT</b>
-          </Link>
-          <div className="homeFeatureComponent">
-            <DrawSvg></DrawSvg>
-            <b>DRAW</b>
+          <div>
+            {" "}
+            schdulded meeting
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+          </div>
+          <div></div>
+          <div>
+            todo
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
           </div>
         </div>
       </div>
-
-      {/* <TaskAndProject></TaskAndProject> */}
-      {/* <Document></Document> */}
     </div>
   );
 };

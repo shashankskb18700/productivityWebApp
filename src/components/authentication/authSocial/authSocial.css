@@ -1,3 +1,19 @@
 .authSocial {
-  margin-bottom: 0.5em;
+  margin-left: 1vw;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+
+.authSocial button {
+  border: none;
+  background-color: var(--primary-button);
+  color: var(--button-text);
+  width: 20.5rem;
+  text-align: initial;
+}
+.googleIcon {
+  /* width: 2em; */
+  height: 1em;
+  transform: scale(1.9);
+  /* padding-right: 5vh; */
 }

@@ -7,9 +7,11 @@ import { ReactComponent as Logo } from "../../assets/svg/logoIcon.svg";
 
 import { ReactComponent as Slogan } from "../../assets/svg/slogan.svg";
 
+import { ReactComponent as Uth } from "../../assets/svg/Time management-cuate (1).svg";
+
 const Auth = () => {
   const [value, setValue] = useState({
-    name: "",
+    Username: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -41,12 +43,12 @@ const Auth = () => {
   const signup = [
     {
       id: 1,
-      name: "name",
+      name: "Username",
       type: "text",
-      placeholder: "Name",
-      lable: "Name",
-      errorMessage: "Please enter you name",
-      pattern: "^[A-Za-z0-9]{3,15}$",
+      placeholder: "Username",
+      lable: "Username",
+      errorMessage: "Your username should contain whitespace.",
+      pattern: "^[A-Za-z0-9]{1,15}$",
       required: true,
     },
     {
@@ -55,7 +57,7 @@ const Auth = () => {
       type: "email",
       placeholder: "Email",
       lable: "Email",
-      errorMessage: "It should be a valid email",
+      errorMessage: "An email address must contain a single @.",
 
       required: true,
     },
@@ -66,7 +68,7 @@ const Auth = () => {
       placeholder: "Password",
       lable: "Password",
       errorMessage:
-        "password should be between 8-16 character and it should include a one letter , one special character and one number number",
+        "password should be between 8-32 character and it should include a one letter , one special character and one number number",
 
       required: true,
     },
@@ -89,7 +91,7 @@ const Auth = () => {
       name: "email",
       type: "email",
       placeholder: "Email",
-      lable: "Email",
+      lable: "EMAIL",
       errorMessage: "It should be a valid email",
 
       required: true,
@@ -99,7 +101,7 @@ const Auth = () => {
       name: "password",
       type: "password",
       placeholder: "Password",
-      lable: "Password",
+      lable: "PASSWORD",
       errorMessage: "Password",
       pattern: "(?m)^((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\\W]).{8,})$",
       required: true,
@@ -108,6 +110,7 @@ const Auth = () => {
   const handleChange = (e) => {
     setValue({ ...value, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const cookie = await axios.post("/login", { ...value });
@@ -117,8 +120,15 @@ const Auth = () => {
   return (
     <div className="authentication">
       <div className="info">
-        <Logo className="logo"></Logo>
+        {/* <Logo className="logo"></Logo> */}
         {/* <Slogan className="logo slogan"></Slogan> */}
+        <span>EFFICIO</span>
+
+        {userType ? (
+          <div onClick={() => setUserType(!userType)}>CREATE ACCOUNT</div>
+        ) : (
+          <div onClick={() => setUserType(!userType)}>LOGIN</div>
+        )}
       </div>
       {/* <div className="backgroundGraphics"></div> */}
       <div className="authSection">
@@ -148,42 +158,17 @@ const Auth = () => {
 
           <div className="callToAction">
             <button onClick={handleSubmit}>
-              {userType ? "Login" : "Sign up"}
+              {userType ? "LOGIN" : "SIGN UP"}
             </button>
-            <p
-              style={{
-                paddingTop: "1em",
-                paddingBottom: "1em",
-                fontWeight: "bold",
-              }}
-            >
-              {" "}
-              Or continue with:
-            </p>
-            <AuthSocial></AuthSocial>
-            {userType ? (
-              <span>
-                New to Efficio ?{" "}
-                <span
-                  style={{ color: "var(--background)" }}
-                  onClick={() => setUserType(!userType)}
-                >
-                  Get started!
-                </span>
-              </span>
-            ) : (
-              <span>
-                Already a member ?{" "}
-                <span
-                  style={{ color: "#F6F4F3" }}
-                  onClick={() => setUserType(!userType)}
-                >
-                  Log in to Efficio.
-                </span>
-              </span>
-            )}
           </div>
         </div>
+        <div className="or">
+          <span className="or1"></span>
+          OR
+          <span className="or2"></span>
+        </div>
+
+        <AuthSocial></AuthSocial>
       </div>
       <div className="authFooter">company info</div>
     </div>

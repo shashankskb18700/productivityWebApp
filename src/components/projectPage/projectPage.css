@@ -1,0 +1,40 @@
+.project {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: var(--background);
+}
+.projectFeature {
+  width: 85vw;
+  /* height: 100vh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.projectFeature svg {
+  transform: scale(0.2);
+  fill: var(--text);
+  stroke: black;
+}
+.projectComponent {
+  display: flex;
+}
+.projectFeatureComponent {
+  text-align: center;
+  margin: 10vh;
+  padding-bottom: 2vh;
+  font-family: "Nunito";
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 0.2em solid black;
+  border-radius: 0.5em;
+  color: black;
+}
+a {
+  text-decoration: none;
+}

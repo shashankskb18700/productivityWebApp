@@ -1,13 +1,13 @@
 .header {
   width: 100vw;
-  background-color: var(--primary);
+  background-color: var(--header-background);
   /* height: 3em; */
   color: var(--text);
   padding: 0em 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 12vh;
+  height: 4em;
 }
 
 .symbol {
@@ -16,9 +16,11 @@
   fill: var(--text);
 }
 .headerLogo {
-  transform: scale(2);
-  margin-left: 1em;
-  fill: var(--text);
+  /* transform: scale(0.6); */
+
+  fill: var(--light-text);
+  width: fit-content;
+  height: 3em;
 }
 .brandDesc {
   display: flex;

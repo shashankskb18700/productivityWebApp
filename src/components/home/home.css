@@ -1,40 +1,29 @@
 .home {
   display: flex;
-  /* align-items: center; */
-  justify-content: center;
-  flex-direction: column;
 
-  background-color: var(--background);
+  /* justify-content: center; */
 }
-.homeFeature {
-  width: 85vw;
-  /* height: 100vh; */
+.homeSidebar {
+  width: 25vw;
+  background-color: var(--secondary-background);
+  border-right: 1.5px solid var(--header-background);
+
+  color: var(--primary-text);
+  min-height: 100vh;
+  margin-right: 1em;
+}
+.creation {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 75vw;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 50px;
+  column-gap: 50px;
+}
+.creation div {
+  width: 20vw;
+  height: 20vh;
+  display: flex;
   align-items: center;
-}
-
-.homeFeature svg {
-  transform: scale(0.2);
-  fill: var(--text);
-  stroke: black;
-}
-.homeComponent {
-  display: flex;
-}
-.homeFeatureComponent {
-  text-align: center;
-  margin: 10vh;
-  padding-bottom: 2vh;
-  font-family: "Nunito";
-  height: 20em;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  border: 0.2em solid black;
-  border-radius: 0.5em;
-  color: black;
-}
-a {
-  text-decoration: none;
+  justify-content: center;
+  background-color: var(--secondary-background);
 }

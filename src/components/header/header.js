@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="brandDesc">
-        <Symbol className="symbol"></Symbol>
+        {/* <Symbol className="symbol"></Symbol> */}
         <Logo className="headerLogo"></Logo>
       </div>
 
