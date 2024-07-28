@@ -29,3 +29,24 @@
   height: 3em;
   padding-right: 1em;
 }
+
+@media (max-width: 600px) {
+  .footer {
+    font-weight: 300;
+    font-size: 0.8em;
+  }
+  .logoAndSloganFooter div {
+    font-size: 2em;
+  }
+
+  .logoAndSloganFooter div:nth-child(2) {
+    font-size: 0.8em;
+    font-family: "Roboto";
+  }
+
+  .footerSocial svg {
+    width: 3em;
+    height: 3em;
+    padding-right: 1em;
+  }
+}

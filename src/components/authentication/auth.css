@@ -79,7 +79,7 @@
 }
 
 input:focus {
-  outline: none;
+  /* outline: none; */
   border: 2px solid var(--accent);
   transition: 0.8s;
 }

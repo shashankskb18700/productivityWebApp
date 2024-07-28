@@ -15,12 +15,14 @@
 .authInput input:invalid[focused="true"] ~ span {
   display: block;
   animation: animateinput 1s ease-in-out;
+  transition: 2s;
 }
 .passError .authInput:nth-child(3) span {
   /* width: 50vh; */
   /* background-color: red; */
   display: block;
   animation: animateinput 1s ease-in-out;
+  transition: 2s;
 }
 
 @keyframes animateinput {

@@ -8,7 +8,7 @@ const Header = () => {
     <div className="header">
       <div className="brandDesc">
         {/* <Symbol className="symbol"></Symbol> */}
-        <Logo className="headerLogo"></Logo>
+        <span>EFFICIO</span>
       </div>
 
       <div>
