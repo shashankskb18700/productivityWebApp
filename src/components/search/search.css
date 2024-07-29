@@ -1,0 +1,26 @@
+.searchBar {
+  border: 2px solid var(--header-background);
+  border-radius: 0.25em;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar span {
+  font-family: "Roboto";
+  text-align: center;
+  text-justify: inter-word;
+
+  /* border-right: none;
+  border-radius: 0.25em;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; */
+}
+
+.searchBar input {
+  outline: none;
+  border: none;
+  padding: 0;
+  padding-left: 0.3em;
+  font-family: "Roboto";
+  height: 2.7em;
+}
