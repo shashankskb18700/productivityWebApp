@@ -32,9 +32,39 @@
   font-weight: 600;
 }
 
-.avatar {
+.headerIcon svg {
   /* transform: scale(0.04); */
-  width: 4em;
-  height: 2em;
+  width: 2em;
+  height: 1.5em;
   fill: var(--text);
+  margin-left: 5vw;
+}
+.headerIcon svg:nth-child(2) {
+  border: 2px solid var(--header-background);
+  border-left: none;
+  border-radius: 0.25em;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: 0;
+}
+
+.headerIcon span {
+  font-family: "Roboto";
+  text-align: center;
+  text-justify: inter-word;
+  border: 2px solid var(--header-background);
+  border-right: none;
+  border-radius: 0.25em;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.headerIcon input {
+  outline: none;
+  border: none;
+  padding: 0;
+  padding-left: 0.3em;
+  font-family: "Roboto";
+}
+.headerIcon {
+  display: inline-flex;
 }
