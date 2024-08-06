@@ -6,16 +6,26 @@ const Home = () => {
     <div>
       <Header></Header>
       <div className="home">
-        <div className="homeSidebar">sidebar </div>
+        <div className="homeSidebar">
+          <a>Overview</a>
+          <a>Project</a>
+          <a>Todo</a>
+          <a>Kanban</a>
+          <a>Meeting</a>
+          <a>Document</a>
+        </div>
 
         <div>
           {" "}
           <div></div>
           <div className="creation">
-            <div> create document</div>
+            <div className="todoHome">
+              <div>TODO</div>
+              <div>actual content</div>
+            </div>
+
             <div> Schedule meeting</div>
-            <div> create todo</div>
-            <div> create drawing</div>
+
             <div> create Project</div>
           </div>
           <div>

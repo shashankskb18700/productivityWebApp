@@ -1,14 +1,19 @@
 .sidebar {
-  width: 15vw;
-  min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
+  width: 20vw;
 
-  background-color: #20508c;
-  color: var(--text);
-  font-weight: bold;
-  font-family: "Nunito";
+  /* background-color: var(--secondary-background); */
+  /* border-right: 1.5px solid var(--header-background); */
+  font-family: "Roboto";
+  font-weight: 600;
+  color: var(--primary-text);
+  height: 77.8vh;
+  padding-top: 10vh;
+  margin-right: 1em;
+  margin-left: 8vw;
 }
 
 .sidebar div {

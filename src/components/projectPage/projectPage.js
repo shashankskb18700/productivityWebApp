@@ -17,7 +17,7 @@ const ProjectPage = () => {
       <Header></Header>
 
       <div className="projectComponent">
-        <Sidebar></Sidebar>
+        <Sidebar content={["overview "]}></Sidebar>
         <div className="projectFeature">
           <Link to={`/task/${uuidv4()}`} className="projectFeatureComponent">
             <TaskSvg></TaskSvg>

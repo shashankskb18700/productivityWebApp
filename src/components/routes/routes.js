@@ -5,6 +5,7 @@ import LandingPage from "../landingPage/landingPage";
 import Task from "../features/taskAndProject/taskAndProject";
 import Document from "../features/document/document";
 import Home from "../home/home";
+import Todo from "../features/todo/Todo";
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,8 @@ const AppRouter = () => {
       <Route path="/" element={<LandingPage></LandingPage>}></Route>
       <Route path="/task/:id" element={<Task></Task>}></Route>
       <Route path="/document/:id" element={<Document></Document>}></Route>
+
+      <Route path="/todo" element={<Todo></Todo>}></Route>
     </Routes>
   );
 };
