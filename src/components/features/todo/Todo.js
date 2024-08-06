@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Header from "../../header/header";
 import Sidebar from "../../sidebar/sidebar";
+import Calender from "./calendar/calendar";
 import { ReactComponent as AddTask } from "../../../assets/svg/add-circle-svgrepo-com.svg";
 import TaskSub from "./taskSub/TaskSub";
 import "./Todo.css";
@@ -33,7 +34,10 @@ const Todo = () => {
 
       <div className="createTodo">
         <div className="createTodoForm">
-          <div> cal</div>
+          <div>
+            {" "}
+            <Calender></Calender>
+          </div>
           <div>time</div>
           <div> inp</div>
           <div>prev</div>

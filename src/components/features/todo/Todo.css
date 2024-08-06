@@ -95,22 +95,22 @@
   width: 80vw;
   height: 100vh;
   display: grid;
-
+  gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: "cal cal prev" "time time prev" "inp inp prev";
 }
-.createTodoForm div:nth-child(1) {
+.createTodoForm > div:nth-child(1) {
   grid-area: cal;
 }
 
-.createTodoForm div:nth-child(2) {
+.createTodoForm > div:nth-child(2) {
   grid-area: time;
 }
-.createTodoForm div:nth-child(3) {
+.createTodoForm > div:nth-child(3) {
   grid-area: inp;
 }
 
-.createTodoForm div:nth-child(4) {
+.createTodoForm > div:nth-child(4) {
   grid-area: prev;
 }
