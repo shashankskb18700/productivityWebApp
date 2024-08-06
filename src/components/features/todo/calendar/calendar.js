@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { ReactComponent as Left } from "../../../../assets/svg/left-circle-svgrepo-com (1).svg";
+import { ReactComponent as Right } from "../../../../assets/svg/right-circle-svgrepo-com.svg";
 
 import "./Calendar.css";
 const Calender = () => {
@@ -79,7 +81,7 @@ const Calender = () => {
             handleMomentChange("backward");
           }}
         >
-          &lt;
+          <Left></Left>
         </span>
         <div className="calendarDate">{calender.map((a) => a)}</div>
         <span
@@ -87,7 +89,7 @@ const Calender = () => {
             handleMomentChange("forward");
           }}
         >
-          &gt;
+          <Right></Right>
         </span>
       </div>
     </div>

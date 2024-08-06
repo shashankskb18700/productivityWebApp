@@ -1,24 +1,47 @@
 .calendar {
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   font-family: "Roboto";
   text-align: center;
   border: 1px solid var(--header-background);
   border-radius: 0.25rem;
   padding: 1rem;
+  height: 50vh;
 }
 .calendar > div:nth-child(1) {
   font-size: 2rem;
 }
 .calendarDate {
   display: grid;
-  grid-template-columns: repeat(7, 2rem);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(7, 4vw);
+  grid-template-rows: repeat(5, 4vh);
   align-content: center;
   justify-content: center;
+  gap: 0.3rem;
 }
 
+.calendarDate > div {
+  background-color: var(--header-background);
+  color: var(--light-text);
+  text-align: center;
+  padding-top: 3px;
+  border-radius: 0.25rem;
+}
+.calendarDate > div:hover {
+  border: 2px solid var(--header-background);
+  background-color: var(--light-text);
+  color: var(--header-backgroud);
+  transition: 0.5s;
+  border-radius: 0.25rem;
+}
 .momentDetail {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  margin: 0.5rem 0;
 }
 
 .calendarCont {
@@ -32,4 +55,9 @@
   color: var(--light-text);
   padding: 0.3rem;
   border-radius: 0.25rem;
+}
+
+.calendarCont svg {
+  width: 2rem;
+  height: 2rem;
 }
