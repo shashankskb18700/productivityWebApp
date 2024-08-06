@@ -1,0 +1,40 @@
+.time {
+  /* width: 100vw; */
+  /* height: 50%;  */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* overflow: auto; */
+  border: 1px solid var(--header-background);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  font-size: 2rem;
+  font-family: "Roboto";
+}
+
+.time div {
+}
+
+.timeCont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+}
+.timeCont div {
+  padding: 0.2rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+  background-color: var(--header-background);
+  border-radius: 0.25rem;
+  border: 2px solid var(--header-background);
+  color: var(--light-text);
+}
+.timeCont div:hover {
+  border: 2px solid var(--header-background);
+  background-color: var(--light-text);
+  color: var(--header-backgroud);
+  transition: 0.5s;
+  border-radius: 0.25rem;
+}

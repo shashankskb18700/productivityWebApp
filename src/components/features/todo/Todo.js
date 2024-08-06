@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "../../header/header";
 import Sidebar from "../../sidebar/sidebar";
 import Calender from "./calendar/calendar";
+import Time from "./time/time";
 import { ReactComponent as AddTask } from "../../../assets/svg/add-circle-svgrepo-com.svg";
 import TaskSub from "./taskSub/TaskSub";
 import "./Todo.css";
@@ -38,7 +39,9 @@ const Todo = () => {
             {" "}
             <Calender></Calender>
           </div>
-          <div>time</div>
+          <div>
+            <Time></Time>
+          </div>
           <div> inp</div>
           <div>prev</div>
         </div>
