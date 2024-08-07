@@ -3,7 +3,7 @@ import { ReactComponent as Left } from "../../../../assets/svg/left-circle-svgre
 import { ReactComponent as Right } from "../../../../assets/svg/right-circle-svgrepo-com.svg";
 
 import "./Calendar.css";
-const Calender = () => {
+const Calender = ({ calValue }) => {
   const [moment, setMoment] = useState([]);
   const [calender, setCalender] = useState([]);
   const days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -26,7 +26,7 @@ const Calender = () => {
     ]);
 
     for (let i = 1; i <= day; i++) {
-      cal.push(<div>{i}</div>);
+      cal.push(i);
     }
     setCalender([...cal]);
   }, []);
@@ -62,7 +62,7 @@ const Calender = () => {
     ]);
     cal = [];
     for (let i = 1; i <= day; i++) {
-      cal.push(<div>{i}</div>);
+      cal.push(i);
     }
     setCalender([...cal]);
   };
@@ -83,7 +83,14 @@ const Calender = () => {
         >
           <Left></Left>
         </span>
-        <div className="calendarDate">{calender.map((a) => a)}</div>
+        <div className="calendarDate">
+          {calender.map((a) => (
+            <div onClick={calValue} value={a} key={a}>
+              {" "}
+              {a}
+            </div>
+          ))}
+        </div>
         <span
           onClick={() => {
             handleMomentChange("forward");

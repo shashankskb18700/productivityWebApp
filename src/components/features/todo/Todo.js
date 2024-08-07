@@ -34,16 +34,30 @@ const Todo = () => {
       </div>
 
       <div className="createTodo">
+        <div>
+          <span>Create Todo</span>
+          <span>close</span>
+        </div>
         <div className="createTodoForm">
           <div>
             {" "}
-            <Calender></Calender>
+            <Calender
+              calValue={(e) => console.log(e.target.getAttribute("value"))}
+            ></Calender>
           </div>
           <div>
-            <Time></Time>
+            <Time
+              timeVal={(e) => console.log(e.target.getAttribute("value"))}
+            ></Time>
           </div>
-          <div> inp</div>
-          <div>prev</div>
+          <div>
+            {" "}
+            <input></input>
+          </div>
+          <div className="preview">
+            <span>Preview </span>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>

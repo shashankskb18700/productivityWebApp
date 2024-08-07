@@ -21,6 +21,11 @@
   display: flex;
   justify-content: space-between;
   overflow: auto;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+}
+.timeCont::-webkit-scrollbar {
+  display: none;
 }
 .timeCont div {
   padding: 0.2rem;

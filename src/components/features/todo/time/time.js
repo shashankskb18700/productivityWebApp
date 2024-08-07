@@ -1,6 +1,6 @@
 import "./time.css";
 
-const Time = () => {
+const Time = ({ timeVal }) => {
   let arr = [];
 
   for (let i = 0; i <= 23; i++) {
@@ -11,7 +11,7 @@ const Time = () => {
       <div>Time</div>
       <div className="timeCont">
         {arr.map((a) => (
-          <div key={a}>
+          <div key={a} onClick={timeVal} value={a}>
             {a < 10 ? 0 : ""}
             {a}:00
           </div>
