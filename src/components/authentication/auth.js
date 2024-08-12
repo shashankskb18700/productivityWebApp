@@ -44,7 +44,7 @@ const Auth = () => {
   const signup = [
     {
       id: 1,
-      name: "Username",
+      name: "username",
       type: "text",
       placeholder: "Username",
       lable: "Username",
@@ -114,7 +114,9 @@ const Auth = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const cookie = await axios.post("/login", { ...value });
+    const cookie = await axios.post(userType == false ? "/signup" : "/login", {
+      ...value,
+    });
     console.log(cookie);
   };
 
