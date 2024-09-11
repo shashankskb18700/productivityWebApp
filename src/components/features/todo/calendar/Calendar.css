@@ -8,11 +8,10 @@
   border: 1px solid var(--header-background);
   border-radius: 0.25rem;
   padding: 1vw;
-  height: 50vh;
 }
-.calendar > div:nth-child(1) {
+/* .calendar > div:nth-child(1) {
   font-size: 2rem;
-}
+} */
 .calendarDate {
   display: grid;
   grid-template-columns: repeat(7, 4vw);

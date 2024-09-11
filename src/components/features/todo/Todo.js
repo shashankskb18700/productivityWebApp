@@ -51,14 +51,14 @@ const Todo = () => {
             ></Time>
           </div>
           <div>
-            {" "}
-            <input></input>
+            <input id="taskTitle" placeholder="Task Name"></input>
           </div>
-          <div className="preview">
-            <span>Preview </span>
-            <div></div>
+          <div>
+            <textarea id="taskDesc" placeholder="Task Description"></textarea>
           </div>
         </div>
+
+        <button>Create Task</button>
       </div>
     </div>
   );

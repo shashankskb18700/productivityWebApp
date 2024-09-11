@@ -69,7 +69,6 @@ const Calender = ({ calValue }) => {
 
   return (
     <div className="calendar">
-      <div>Calendar</div>
       <div className="momentDetail">
         <span>{moment[3]}</span>
         <span>{moment[1]}</span>
